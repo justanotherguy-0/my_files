@@ -7,23 +7,12 @@ def trg_div_n(n):
     while even_m>1  or odd_m>1:
         cd=1
         if even_m<p**2 and even_m>1:
-            
-            while not odd_m % even_m:
-                odd_m/=even_m
-                cd+=1
-            
-
             cd+=1
             even_m=1
             d*=cd
             p+=1
             continue          
         if odd_m<p**2 and odd_m>1:
-            
-            while not even_m % odd_m:
-                even_m/=odd_m
-                cd+=1
-            
             cd+=1
             odd_m=1
             d*=cd
@@ -32,11 +21,9 @@ def trg_div_n(n):
         while not even_m % p:
             even_m/=p
             cd+=1
-            
         while not odd_m % p:
             odd_m/=p
             cd+=1
-            
         d*=cd    
         p+=1
     return(d)
